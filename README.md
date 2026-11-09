@@ -15,6 +15,16 @@ no internal documents, configuration, names, addresses, credentials or tokens.
 The source, build steps and SHA-256 of each lock screen picture are kept in Burger Boat's
 private IT repository under `ops/m365/lock-screen/`.
 
+## Checking a file
+
+Each picture has a `.sha256` file next to it. To check the copy the PCs download:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/burgerboat/public/main/windows/lock-screen/burger-boat-lock-screen-2026-11-07.png | sha256sum
+```
+
+It must print the hash in `burger-boat-lock-screen-2026-11-07.png.sha256`.
+
 ## Rules
 
 - **Never replace, rename or delete a published file while something points at it.** Windows
